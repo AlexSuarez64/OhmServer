@@ -34,6 +34,13 @@ namespace OhmServer
             services.AddSingleton(_config);
             services.AddSingleton(_env);
             services.AddScoped<IOhmValueCalculator, OhmValueCalculator>();
+            services.AddCors(options =>
+                { options.AddPolicy("CORS",
+                  corsPolicyBuilder => corsPolicyBuilder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    .AllowAnyHeader()
+                    .AllowCredentials());
+            });
             services.AddMvc();
         }
 
@@ -45,7 +52,7 @@ namespace OhmServer
                 app.UseDeveloperExceptionPage();
             }
             app.UseStaticFiles();
-
+            app.UseCors("CORS");
             app.UseMvc(routes =>
             {
                 routes.MapRoute(

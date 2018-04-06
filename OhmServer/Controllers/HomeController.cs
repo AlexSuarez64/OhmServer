@@ -7,6 +7,7 @@ using OhmServer.Models;
 
 namespace OhmServer.Controllers
 {
+    [EnableCors("CORS")]
     public class HomeController : Controller
     {
         private IOhmValueCalculator _ohm;

@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace OhmServer.Controllers
 {
+    [EnableCors("CORS")]
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
