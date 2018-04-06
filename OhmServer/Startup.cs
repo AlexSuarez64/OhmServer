@@ -40,7 +40,7 @@ namespace OhmServer
                     .AllowAnyMethod()
                     .AllowAnyHeader()
                     .AllowCredentials());
-            });
+                });
             services.AddMvc();
         }
 
