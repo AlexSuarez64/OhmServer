@@ -22,3 +22,4 @@ namespace OhmServer.Models
         List<ResistorTable> CreateTable();
     }
 }
+

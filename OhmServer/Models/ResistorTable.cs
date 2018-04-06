@@ -15,3 +15,4 @@ namespace OhmServer.Models
         public double Percent { get; set; }
     }
 }
+
