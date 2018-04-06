@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using OhmServer.Models;
+using Microsoft.AspNetCore.Cors;
 
 namespace OhmServer.Controllers
 {
